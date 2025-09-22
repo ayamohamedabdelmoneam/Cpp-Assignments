@@ -1,0 +1,232 @@
+1- Write a program that Print all 
+numbers from 1 to 10.
+                                                          // Answer
+#include <iostream>;
+using namespace std;
+int main() {
+	
+	for (int i = 1; i <= 10; i++) {
+		cout << i << endl;
+}
+}
+//=======================================================================================================================================
+2- Write a program that taking a 
+number from user then print all 
+numbers from 1 to this number.
+                                         // Answer
+#include <iostream>;
+using namespace std;
+int main() {
+	
+	cout << " Please Enter A Number" << endl;
+	int x;
+	cin >> x;
+	for (int i = 1; i <= x; i++) {
+		cout << i << endl;
+	}
+}
+//=========================================================================================================================================
+3- Write a program that Print even 
+numbers from 1 to 10.
+                                                 // Answer
+#include <iostream>;
+using namespace std;
+int main() {
+	for (int i = 1; i <= 10; i++) {
+		if (i % 2 == 0) {
+			cout << i << endl;
+		}
+	}
+
+
+}
+//=========================================================================================================================================
+4- Write a program that Print all 
+numbers that can be divided by 
+3 or 4 from 1 up to 10.
+                                                         // Answer 
+#include <iostream>;
+using namespace std;
+int main() {
+	for (int i = 1; i <= 10; i++) {
+		if (i % 3 == 0 || i %4 == 0) {
+			cout << i << endl;
+		}
+	}
+
+
+}
+//========================================================================================================================================
+5- Write a program that Print how 
+many number that can be 
+divided by 3 or 4 from 1 up to 
+10.
+                                                        // Answer
+#include <iostream>;
+using namespace std;
+int main() {
+ int	counter = 0;
+ for (int i = 1; i <= 10; i++) {
+	 if (i % 3 == 0 || i % 4 == 0) {
+		 counter++;
+	 }
+ }
+ cout << counter << endl;
+
+
+}
+// =========================================================================================================================================
+6- Write a program that Print all 
+small letters.
+                                                   // Answer
+#include <iostream>;
+using namespace std;
+int main() {
+
+ for (char i = 'a'; i <= 'z'; i++) {
+	 cout << i << endl;
+ }
+
+
+}
+//=========================================================================================================================================
+7- 
+ Write a program that print sum 
+of numbers from 1 to 10.
+                                                // Answer
+#include <iostream>;
+using namespace std;
+int main() {
+	int sum = 0 ;
+ for (int i = 1; i <= 10 ; i++) {
+	 sum += i;
+ }
+ cout << "Sum Of numbers is = " << sum << endl;
+
+
+}
+//========================================================================================================================================
+
+8-  Write a program that Print 
+factorial of an integer.
+                                                      // Answer
+#include <iostream>;
+using namespace std;
+int main() {
+	int factorial = 1 ;
+	int num; 
+	cout << "Enter An integer \n";
+	cin >> num;
+ for (int i = 1; i <= num ; i++) {
+	 factorial *= i;
+ }
+ cout << "Factorial of " << num << " = " << factorial << endl;
+
+
+}
+//========================================================================================================================================
+9-Write a program that Take an 
+integer then print all divisor of 
+this number 
+￭For example user insert 8 then print 1 2 4 8
+￭ another example user insert 9 then print 1 3 9
+                                                // Answer 
+#include <iostream>;
+using namespace std;
+int main() {
+	int num; 
+	cout << "Enter A Number \n";
+	cin >> num;
+ for (int i = 1; i <= num ; i++) {
+	 if (num % i == 0) {
+		 cout << i << endl;
+	 }
+	
+ }
+
+
+}
+//=========================================================================================================================================
+10- Write a program that Print the 
+max of 10 integers.
+                                          // Answer
+
+#include <iostream>;
+using namespace std;
+int main() {
+	int max = INT_MIN ;
+	int num = 0 ; 
+	cout << "Enter A Number \n";
+	
+	for (int i = 1; i <= 10; i++) {
+		cin >> num; 
+		if (num > max) {
+			max = num;
+		}
+}
+	cout << max << endl;
+
+}
+//========================================================================================================================================
+11- Write a program that Check if 
+the number is prime or not.
+                                                 // Answer 
+#include <iostream>;
+using namespace std;
+int main() {
+	int num = 0;
+	int counter = 0;
+
+	cout << " Please Enter Number \n";
+	cin >> num;
+	for (int i = 1; i <= num ; i++) {
+	
+		if (num / i) {
+			counter++;
+		
+		}
+	}
+	if (counter == 2) {
+		cout << " Number Is Prime = " << num;
+	}
+	else {
+		cout << " Number Is Not Prime = " << num;
+	}
+
+}
+//=========================================================================================================================================
+12-  Write a program that Print the count of 
+digits of an integer.
+                                                   //Answer
+#include <iostream>;
+using namespace std;
+int main() {
+	int num, counter  = 0;
+	cout << "Enter Number \n";
+	cin >> num;
+	for (; num > 0; ) {
+		counter++;
+		num /= 10; 
+	}
+	cout << "Number Of digits is = " << counter; 
+
+}
+//========================================================================================================================================
+13- Write a program that Reverse 
+an integer.
+                                                    // Answer 
+#include <iostream>;
+using namespace std;
+int main() {
+	int num {}, rev = 0;
+	cout << "Enter Number \n";
+	cin >> num;
+	for (; num > 0; ) {
+		rev = rev * 10 + num % 10 ;
+		num /= 10;
+	}
+	cout << " Reverse = " << rev;
+
+}
+//==========================================================================================================================================
+14- 
