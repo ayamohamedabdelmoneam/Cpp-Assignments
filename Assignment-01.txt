@@ -97,15 +97,15 @@ int main() {
 #include <iostream>;
 using namespace std;
 int main() {
-	int num{}, sum;
-	cout << "Enter A number" << endl;
+	int num{}, sum{};
+	cout << "Please Enter A Number \n";
 	cin >> num;
 	sum = num % 10;
-	num = num / 10;
+	num /= 10 ;
 	sum += num % 10;
-	num = num / 10;
+	num /= 10;
 	sum += num % 10;
-	cout << sum;
+	cout << " Sum = " << sum << endl ;
 
 }
 //========================================================================================================================================
