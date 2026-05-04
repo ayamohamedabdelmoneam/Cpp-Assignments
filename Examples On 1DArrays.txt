@@ -1,0 +1,254 @@
+                                                           Array Examples
+1- Write a program that Print 
+summation of an array.
+                                                    Answer
+#include <iostream>
+using namespace std;
+int main() {
+	
+	int arr[5]{}, sum{};
+	cout << " Please Enter Five Values To Fill Array\n";
+	for (int i = 0; i < size(arr); i++) {
+		cin >> arr[i];
+		sum += arr[i];
+	}
+	cout << "The Sum = " << sum;
+	
+	}
+//=================================================================================================================================
+2- Write a program that Print 
+positive numbers of an array.
+                                                       Answer
+#include <iostream>
+using namespace std;
+int main() {
+	
+	int arr[10]{};
+	for (int i = 0; i < size(arr); i++) {
+		cin >> arr[i];
+	}
+	for (int i = 0; i < size(arr); i++) {
+		if (arr[i] >= 0) {
+			cout << arr[i];
+		}
+	}
+
+
+
+
+}
+//==================================================================================================================================
+3- Write a program that Replace 
+all negative numbers with zero.
+                                                     Answer
+#include <iostream>
+using namespace std;
+int main() {
+	
+	int arr[5]{}, sum{};
+	cout << " Please Enter Five Values To Fill Array\n";
+	for (int i = 0; i < size(arr); i++) {
+		cin >> arr[i];
+		if (arr[i] < 0) {
+			arr[i] = 0;
+		}
+	}
+	for (int i = 0; i < size(arr); i++) {
+		cout << arr[i];
+
+	}
+	
+	}
+//====================================================================================================================================
+4- Write a program that Get the 
+max of an array.
+                                                  Answer
+#include <iostream>
+using namespace std;
+int main() {
+	
+	int arr[5]{}, max = INT_MIN;
+	cout << " Please Enter Five Values To Fill Array\n";
+	for (int i = 0; i < size(arr); i++) {
+		cin >> arr[i];
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+	}
+	cout << max;
+	
+	}
+//=======================================================================================================================================
+5- Write a program that taking array from 
+user and then print beside each number 
+prime or not prime
+
+
+                                                           Answer
+#include <iostream>
+using namespace std;
+int main() {
+	
+	int arr[5]{};
+	cout << " Please Enter Five Values To Fill Array\n";
+	for (int i = 0; i < size(arr); i++) {
+		cin >> arr[i];
+	}
+
+	for (int i = 0; i < size(arr); i++) {
+		int count = 0;
+		for (int j = 1; j <= arr[i]; j++) {
+			if (arr[i] % j == 0) {
+				count++;
+			}
+		}
+		if (count == 2) {
+			cout << arr[i] << " Prime\n";
+		}
+		else {
+			cout << arr[i] << " Not Prime\n";
+		}
+	}
+	}
+//===================================================================================================================================
+
+6- Write a program that Search for 
+value in array.
+                                                              Answer
+
+#include <iostream>
+using namespace std;
+int main() {
+	int arr[5]{}, flag = -1, num{};
+	cout << "Enter Five Value\n";
+	for (int i = 0; i < size(arr); i++) {
+		cin >> arr[i];
+	}
+	cout << "Enter Number To Search\n";
+	cin >> num;
+	for (int i = 0; i < size(arr); i++) {
+		if (num == arr[i]) {
+			flag = i;
+		}
+	}
+	if (flag == -1) {
+		cout << num << " Is Not Founded\n";
+	}
+	else {
+		cout << num << " Is Founded At Index " << flag;
+	}
+
+}
+
+                                                       Another Solution
+#include <iostream>
+using namespace std;
+int main() {
+	int arr[5]{},num{};
+         bool flag = false;
+	cout << "Enter Five Value\n";
+	for (int i = 0; i < size(arr); i++) {
+		cin >> arr[i];
+	}
+	cout << "Enter Number To Search\n";
+	cin >> num;
+	for (int i = 0; i < size(arr); i++) {
+		if (num == arr[i]) {
+			flag = true;
+		}
+	}
+	if (!flag) {
+		cout << num << " Is Not Founded\n";
+	}
+	else {
+		cout << num << " Is Founded\n";
+	}
+
+}
+
+//===================================================================================================================================
+7- Write a program that Insert 
+value at specific index in array 
+then shift other numbers
+
+                                                                Answer
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[6]{};
+
+    cout << "Enter five values\n";
+    for (int i = 0; i < 5; i++) {
+        cin >> arr[i];
+    }
+
+    cout << "Enter The Index To Insert\n";
+    int index;
+    cin >> index;
+
+    cout << "Enter Value To Insert\n";
+    int num;
+    cin >> num;
+    for (int i = 4; i >= index; i--) {
+        arr[i + 1] = arr[i];
+    }
+    arr[index] = num;
+
+    for (int i = 0; i < size(arr); i++) {
+        cout << arr[i] << " ";
+    }
+}
+//====================================================================================================================================
+8- 
+Write a program that Reverse 
+an array inside memory.
+                                                               Answer
+#include <iostream>
+using namespace std;
+int main() {
+
+	int arr[5]{}, temp;
+	cout << "Enter Five values\n";
+	for (int i = 0; i < size(arr) ; i++) {
+		cin >> arr[i];
+	}
+
+	for (int i = 0; i < size(arr) / 2; i++) {
+
+		temp = arr[i];  // the first element will be store in temp 
+		arr[i]  = arr[size(arr) - 1 - i]; // last ele will be store in first place
+		arr[size(arr) - 1 - i] = temp; // temp will be store in last element that contain the value of first element
+
+		
+	}
+
+	for (int i = 0; i < size(arr); i++) {
+		cout << arr[i] << " ";
+	}
+}
+                                                              // Another solution 
+#include <iostream>
+using namespace std;
+int main() {
+
+	int arr[5]{}, temp[5]{};
+	cout << "Enter Five values\n";
+	for (int i = 0; i < size(arr) ; i++) {
+		cin >> arr[i];
+	}
+	for (int i = 4; i >=  0; i--) {
+		temp[4 - i] = arr[i];
+	}
+	for (int i = 0; i < size(arr); i++) {
+		arr[i] = temp[i];
+	}
+
+
+
+	for (int i = 0; i < size(arr); i++) {
+		cout << arr[i] << " ";
+	}
+
+}
+
